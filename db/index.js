@@ -22,7 +22,7 @@ class DB {
     }
 
     addDept(name) {
-        return this.connection.promise().query('INSERT INTO departments (name)values(?)');
+        return this.connection.promise().query('INSERT INTO departments (name)values(?)', [name]);
     }
 
     addEmployee(first_name, last_name, role_id, manager_id) {
